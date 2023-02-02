@@ -11,9 +11,8 @@ public class task1 {
         try {
             Scanner iScanner = new Scanner(System.in);
             System.out.println("Введите положительное число n: ");
-            String str_n = iScanner.nextLine();
+            int num_n = iScanner.nextInt();
             iScanner.close();
-            int num_n = Integer.parseInt(str_n);
 
             if (num_n > 0) {
                 int sum_n = 0;
@@ -31,6 +30,5 @@ public class task1 {
         } catch (Exception e) {
             System.err.println("Ошибка! Попробуйте ещё раз :)");
         }
-
     }
 }

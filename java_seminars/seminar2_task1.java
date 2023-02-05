@@ -1,7 +1,5 @@
 package java_seminars;
 
-import javax.sound.midi.Synthesizer;
-
 public class seminar2_task1 {
     public static void main(String[] args) {
         /*

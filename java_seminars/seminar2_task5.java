@@ -67,8 +67,8 @@ public class seminar2_task5 {
     }
 
     public static void writeToFile(String[] text) {
-        try {
-            FileWriter f1 = new FileWriter("StringArray.txt", true);
+
+        try (FileWriter f1 = new FileWriter("StringArray.txt", true)) {
             for (int i = 0; i < text.length; i++) {
                 f1.write(text[i] + ", ");
             }

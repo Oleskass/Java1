@@ -25,8 +25,7 @@ public class seminar2_task4 {
             sb.append(text);
         }
 
-        try {
-            FileWriter f1 = new FileWriter("fileTEST.txt", true);
+        try (FileWriter f1 = new FileWriter("fileTEST.txt", true)) {
             f1.write(sb + "\n");
             f1.flush();
         } catch (IOException e) {

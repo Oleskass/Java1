@@ -5,9 +5,6 @@ public class seminar2_task2extra {
     public static void main(String[] args) {
 
         String text = "{\"name\" : \"site_3\", \"version\" : \"1.0.0\", \"description\" : \"text\", \"main\" : \"index-js\"}";
-        // String text2 = text.replace(",", "");
-        // String newText = text.replace("{", "").replace("}",
-        // "").replace("\"", "").replace(" ", "");
         String newText = text.replaceAll("[{}\" ]", "");
 
         System.out.println(text);

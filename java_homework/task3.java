@@ -42,7 +42,7 @@ public class task3 {
                 case "/":
                     if (num_2 != 0) {
                         res = calcDiv(num_1, num_2);
-                        System.out.printf("%d %s %d = %.2f\n", num_1, operation, num_2, res);
+                        System.out.printf("%d %s %d = %d\n", num_1, operation, num_2, res);
                     } else {
                         System.out.println("На ноль делить нельзя");
                     }

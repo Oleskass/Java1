@@ -26,46 +26,24 @@ public class sem2task2extra {
             String jLineClear = jLine.replaceAll("[\"{}\\[\\]]", "");
             // System.out.println(jLineClear);
             StringBuilder sb = new StringBuilder();
+            String line1 = "Студент ";
+            String line2 = " получил ";
+            String line3 = " по предмету ";
             String[] arr = jLineClear.split(",");
-            for (int i = 0; i < arr.length; i++) {
-                String[] values = arr[i].split(":");
-                // for (int j = 0; j < values.length; j++) {
-                // System.out.println("item - " + arr[i]);
+            for (String elem : arr) {
+                String[] values = elem.split(":");
                 // System.out.println(values[0]);
                 // System.out.println(values[1]);
-                System.out.println("i = " + i);
-                for (int j = i; j <= i; j++) {
-
-                    switch (j) {
-                        case 0:
-                            sb.append("Студент " + values[1]);
-                            System.out.println("i case0 = " + i);
-                            break;
-                        case 1:
-                            sb.append(" получил " + values[1]);
-                            System.out.println("i case1 = " + i);
-                            break;
-                        case 2:
-                            sb.append(" по предмету " + values[1] + ".");
-                            System.out.println("i case2 = " + i);
-                            break;
-
-                        default:
-                            break;
-                    }
-
+                if ("фамилия".equals(values[0])) {
+                    sb.append(line1).append(values[1]);
+                } else if ("оценка".equals(values[0]))
+                    sb.append(line2).append(values[1]);
+                else if ("предмет".equals(values[0])) {
+                    sb.append(line3).append(values[1] + ".\n");
                 }
-
-                // }
             }
-            System.out.println("sb: " + sb);
-            // for (String item : arr) {
-            // String[] values = item.split(":");
-            // System.out.println("item - " + item);
-            // System.out.println(values[0]);
-            // System.out.println(values[1]);
-            // // sb.append("Студент" + values[1]);
-            // }
+
+            System.out.println(sb);
 
         } catch (Exception e) {
             System.out.println("Что-то пошло не так");

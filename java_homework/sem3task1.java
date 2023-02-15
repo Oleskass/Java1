@@ -17,15 +17,15 @@ public class sem3task1 {
                 numbers.add(random.nextInt(50));
             }
             System.out.println("Массив из случайных чисел:\n" + numbers);
-
-            for (int i = 0; i < numbers.size() - 1; i++) {
+            int i = 0;
+            while (i < numbers.size()) {
                 if (numbers.get(i) % 2 == 0) {
-                    System.out.println("numbers.get(i)" + numbers.get(i));
+                    // System.out.println("numbers.get(i)" + numbers.get(i));
                     numbers.remove(i);
-                    i--;
-                }
+                } else
+                    i++;
             }
-            System.out.println(numbers);
+            System.out.println("Тот же массив без чётных чисел:\n" + numbers);
 
         } catch (Exception e) {
             System.out.println("Что-то пошло не так");

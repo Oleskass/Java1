@@ -1,9 +1,7 @@
 package java_homework.sem6;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -42,26 +40,6 @@ public class Laptop {
                 && price == l.price && hdSize == l.hdSize && inStock == l.inStock;
     }
 
-    // public String getBrand() {
-    // return brand;
-    // }
-
-    // public String getOS() {
-    // return OS;
-    // }
-
-    // public int getRAMSize() {
-    // return ramSize;
-    // }
-
-    // public int getHDSize() {
-    // return hdSize;
-    // }
-
-    // public boolean getInStock() {
-    // return inStock;
-    // }
-
     public static Map<Integer, String> filterLaptopBrand(HashSet<Laptop> hashLaptop) {
         Set<String> res = new HashSet<String>();
         for (Laptop elem : hashLaptop) {
@@ -79,6 +57,94 @@ public class Laptop {
     public static void filter2LaptopBrand(Map<Integer, String> map1, HashSet<Laptop> hashLaptop, int inputNumber) {
         for (Laptop elem : hashLaptop) {
             if (map1.get(inputNumber) == elem.brand) {
+                System.out.println(elem.toString());
+            }
+        }
+    }
+
+    public static Map<Integer, String> filterLaptopOS(HashSet<Laptop> hashLaptop) {
+        Set<String> res = new HashSet<String>();
+        for (Laptop elem : hashLaptop) {
+            res.add(elem.OS);
+        }
+        int i = 0;
+        Map<Integer, String> map1 = new HashMap<>();
+        for (var elem : res) {
+            i++;
+            map1.put(i, elem);
+        }
+        return map1;
+    }
+
+    public static void filter2LaptopOS(Map<Integer, String> map1, HashSet<Laptop> hashLaptop, int inputNumber) {
+        for (Laptop elem : hashLaptop) {
+            if (map1.get(inputNumber) == elem.OS) {
+                System.out.println(elem.toString());
+            }
+        }
+    }
+
+    public static Map<Integer, Integer> filterLaptopRAM(HashSet<Laptop> hashLaptop) {
+        Set<Integer> res = new HashSet<Integer>();
+        for (Laptop elem : hashLaptop) {
+            res.add(elem.ramSize);
+        }
+        int i = 0;
+        Map<Integer, Integer> map1 = new HashMap<>();
+        for (var elem : res) {
+            i++;
+            map1.put(i, elem);
+        }
+        return map1;
+    }
+
+    public static void filter2LaptopRAM(Map<Integer, Integer> map1, HashSet<Laptop> hashLaptop, int inputNumber) {
+        for (Laptop elem : hashLaptop) {
+            if (map1.get(inputNumber) == elem.ramSize) {
+                System.out.println(elem.toString());
+            }
+        }
+    }
+
+    public static Map<Integer, Integer> filterLaptopHDSize(HashSet<Laptop> hashLaptop) {
+        Set<Integer> res = new HashSet<Integer>();
+        for (Laptop elem : hashLaptop) {
+            res.add(elem.hdSize);
+        }
+        int i = 0;
+        Map<Integer, Integer> map1 = new HashMap<>();
+        for (var elem : res) {
+            i++;
+            map1.put(i, elem);
+        }
+        return map1;
+    }
+
+    public static void filter2LaptopHDSize(Map<Integer, Integer> map1, HashSet<Laptop> hashLaptop, int inputNumber) {
+        for (Laptop elem : hashLaptop) {
+            if (map1.get(inputNumber) == elem.hdSize) {
+                System.out.println(elem.toString());
+            }
+        }
+    }
+
+    public static Map<Integer, Boolean> filterLaptopIfInStock(HashSet<Laptop> hashLaptop) {
+        Set<Boolean> res = new HashSet<Boolean>();
+        for (Laptop elem : hashLaptop) {
+            res.add(elem.inStock);
+        }
+        int i = 0;
+        Map<Integer, Boolean> map1 = new HashMap<>();
+        for (var elem : res) {
+            i++;
+            map1.put(i, elem);
+        }
+        return map1;
+    }
+
+    public static void filter2LaptopIfInStock(Map<Integer, Boolean> map1, HashSet<Laptop> hashLaptop, int inputNumber) {
+        for (Laptop elem : hashLaptop) {
+            if (map1.get(inputNumber) == elem.inStock) {
                 System.out.println(elem.toString());
             }
         }

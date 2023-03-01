@@ -1,7 +1,7 @@
 package java_homework;
 
 public class sem2task1 {
-    /*
+    /* изменение 1++++++++
      * Семинар 2. Задание 1.
      * Дана строка sql-запроса "select * from students where ".
      * Сформируйте часть WHERE этого запроса, используя StringBuilder.
